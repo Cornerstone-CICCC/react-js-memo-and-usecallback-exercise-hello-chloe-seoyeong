@@ -1,10 +1,12 @@
+import { memo } from "react";
+
 type Props = {
-  fetch: () => void;
+  onFetch: () => void;
 };
 
-const GetProductsButton = ({ fetch }: Props) => {
+const GetProductsButton = memo(({ onFetch }: Props) => {
   console.log("Rendered Button Component");
-  return <button onClick={fetch}>Fetch Products</button>;
-};
+  return <button onClick={onFetch}>Fetch Products</button>;
+});
 
 export default GetProductsButton;
