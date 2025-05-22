@@ -1,6 +1,7 @@
 import "./App.css";
 import { useState } from "react";
 import Profile from "./components/Profile";
+import ProductList from "./components/ProductList";
 
 const App = () => {
   const [count, setCount] = useState<number>(0);
@@ -13,6 +14,7 @@ const App = () => {
         <button onClick={() => setCount((prev) => prev + 1)}>+</button>
       </div>
       <Profile firstname={firstname} lastname={lastname} />
+      <ProductList />
     </div>
   );
 };
