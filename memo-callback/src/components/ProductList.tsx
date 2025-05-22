@@ -1,4 +1,5 @@
 import { useState } from "react";
+import GetProductsButton from "./GetProductsButton";
 
 type ProductProps = {
   id: number;
@@ -12,12 +13,11 @@ const ProductList = () => {
     const data = await res.json();
     setProducts(data);
   };
-  fetchProducts();
 
-  console.log(products);
   return (
     <div>
       <h2>ProductList</h2>
+      <GetProductsButton fetchProdcut={fetchProducts} />
     </div>
   );
 };
